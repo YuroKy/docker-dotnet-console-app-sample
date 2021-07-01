@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace DockerConsole
 {
@@ -6,7 +7,8 @@ namespace DockerConsole
   {
     static void Main(string[] args)
     {
-      Console.WriteLine($"Hello, {args[0]}");
+      var name = args.Any() ? args[0] : "stranger";
+      Console.WriteLine($"Hello, {name}");
     }
   }
 }
